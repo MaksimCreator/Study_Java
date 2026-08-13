@@ -39,7 +39,7 @@ public class EighthTask implements IService
     private void Print(String name,float newSalary,float growthYearSalary)
     {
         _textBuilder.append(name)
-                .append("теперь получает ")
+                .append(" теперь получает ")
                 .append(newSalary)
                 .append(" рублей. Годовой доход вырос на ")
                 .append(growthYearSalary)

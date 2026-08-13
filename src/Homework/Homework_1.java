@@ -1,4 +1,6 @@
-public class Homework_1 
+package Homework;
+
+public class Homework_1
 {
     private final StringBuilder _stringBuilder = new StringBuilder();
     private final Company _company = new Company();

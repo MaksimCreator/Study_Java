@@ -7,21 +7,21 @@ public class FirstTask implements IService
 {
     private final TextBuilder _textBuilder = new TextBuilder();
 
-    private final int _int = 1;
-    private final byte _byte = 2;
-    private final short _short = 3;
-    private final long _long = 4;
-    private final float _float = 5;
-    private final double _double = 6;
+    private final int variableInt = 1;
+    private final byte variableByte = 2;
+    private final short variablShort = 3;
+    private final long variablLong = 4L;
+    private final float variablFloat = 5f;
+    private final double variablDouble = 6;
 
     public void Print()
     {
-        Print("_int",_int);
-        Print("_byte",_byte);
-        Print("_short",_short);
-        Print("_long",_long);
-        Print("_float",_float);
-        Print("_double",_double);
+        Print("_int",variableInt);
+        Print("_byte",variableByte);
+        Print("_short",variablShort);
+        Print("_long",variablLong);
+        Print("_float",variablFloat);
+        Print("_double",variablDouble);
     }
 
     private void Print(String nameVariable,Object variable)

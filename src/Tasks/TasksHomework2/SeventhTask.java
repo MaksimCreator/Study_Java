@@ -4,20 +4,17 @@ import Service_Locator.IService;
 
 public class SeventhTask implements IService
 {
-    private final int _loseWeight = 7000;
-    private final int _oneDayMinLoseWeight = 250;
-    private final int _oneDayMaxLoseWeight = 500;
-    private final float _oneDayMiddleLoseWeight = (_oneDayMinLoseWeight + _oneDayMaxLoseWeight) / 2 ;
+    private final int loseWeight = 7000;
+    private final int oneDayMinLoseWeight = 250;
+    private final int oneDayMaxLoseWeight = 500;
 
     public void Print()
     {
-        int dayLoseWightForMin = _loseWeight / _oneDayMinLoseWeight;
-        int dayLoseWightForMax = _loseWeight / _oneDayMaxLoseWeight;
-        float dayLoseWightForMiddle = _loseWeight / _oneDayMiddleLoseWeight;
+        int dayLoseWightForMin = loseWeight / oneDayMinLoseWeight;
+        int dayLoseWightForMax = loseWeight / oneDayMaxLoseWeight;
 
         IO.println(dayLoseWightForMin);
         IO.println(dayLoseWightForMax);
         IO.println((dayLoseWightForMax + dayLoseWightForMin) / 2);
-        IO.println(dayLoseWightForMiddle);
     }
 }

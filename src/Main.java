@@ -24,7 +24,7 @@ void main()
     serviceLocator.Registery(SeventhTask.class,seventhTask);
     serviceLocator.Registery(EighthTask.class,eighthTask);
 
-    Homework_2 homework = new Homework_2(serviceLocator);
+    Homework_2 homework_2 = new Homework_2(serviceLocator);
 
-    homework.Print();
+    homework_2.Print();
 }

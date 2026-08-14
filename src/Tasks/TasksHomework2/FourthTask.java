@@ -7,23 +7,23 @@ public class FourthTask implements IService
 {
     private final TextBuilder _textBuilder = new TextBuilder();
 
-    private final int _twentyMinutes = 20;
-    private final int _minutesAtDay = 24 * 60;
-    private final int _minutesAtThreeDays = _minutesAtDay * 3;
-    private final int _minutesAtMonth = _minutesAtDay * 31;
-    private final int _bottlePerMinuts = 16 / 2;
+    private final int twentyMinutes = 20;
+    private final int minutesAtDay = 24 * 60;
+    private final int minutesAtThreeDays = minutesAtDay * 3;
+    private final int minutesAtMonth = minutesAtDay * 31;
+    private final int bottlePerMinuts = 16 / 2;
 
     public void Print()
     {
-        Print(_twentyMinutes);
-        Print(_minutesAtDay);
-        Print(_minutesAtThreeDays);
-        Print(_minutesAtMonth);
+        Print(twentyMinutes);
+        Print(minutesAtDay);
+        Print(minutesAtThreeDays);
+        Print(minutesAtMonth);
     }
 
     private void Print(int timeWorkToMinuts)
     {
-        int bottles = timeWorkToMinuts * _bottlePerMinuts;
+        int bottles = timeWorkToMinuts * bottlePerMinuts;
 
         _textBuilder.append("За ")
                 .append(timeWorkToMinuts)

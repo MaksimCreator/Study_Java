@@ -5,23 +5,23 @@ import Tasks.TextBuilder;
 
 public class SixthTask implements IService
 {
-    private final float _gramToKilogram = 1000;
-    private final int _countBananа = 5;
-    private final int _weightBanana = 80;
-    private final int _countMilk = 2;
-    private final int _weightMilk = 105;
-    private final int _countIceCream = 2;
-    private final int _weightIceCream = 100;
-    private final int _countEgg = 4;
-    private final int _weightEgg = 70;
+    private final float gramToKilogram = 1000;
+    private final int countBananа = 5;
+    private final int weightBanana = 80;
+    private final int countMilk = 2;
+    private final int weightMilk = 105;
+    private final int countIceCream = 2;
+    private final int weightIceCream = 100;
+    private final int countEgg = 4;
+    private final int weightEgg = 70;
 
-    private int WeightDrink() { return _countBananа * _weightBanana + _countMilk * _weightMilk
-        + _countIceCream * _weightIceCream + _countEgg * _weightEgg;}
+    private int WeightDrink() { return countBananа * weightBanana + countMilk * weightMilk
+        + countIceCream * weightIceCream + countEgg * weightEgg;}
 
     public void Print()
     {
         int weightDrink = WeightDrink();
         IO.println(weightDrink);
-        IO.println((float)weightDrink / _gramToKilogram);
+        IO.println((float)weightDrink / gramToKilogram);
     }
 }

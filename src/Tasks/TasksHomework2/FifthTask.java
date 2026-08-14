@@ -5,24 +5,24 @@ import Tasks.TextBuilder;
 
 public class FifthTask implements IService
 {
-    private final TextBuilder _textBuilder = new TextBuilder();
+    private final TextBuilder textBuilder = new TextBuilder();
 
-    private final float _whiteCansPerClassroom = 2;
-    private final float _brownCansPerClassroom = 4;
-    private final float _cans = 120;
+    private final float whiteCansPerClassroom = 2;
+    private final float brownCansPerClassroom = 4;
+    private final float cans = 120;
 
     public void Print()
     {
-        float classroom = _cans / (_whiteCansPerClassroom + _brownCansPerClassroom);
+        float classroom = cans / (whiteCansPerClassroom + brownCansPerClassroom);
 
-        _textBuilder.append("В школе, где ")
+        textBuilder.append("В школе, где ")
                 .append((int) classroom)
                 .append(" классов, нужно ")
-                .append(classroom * _whiteCansPerClassroom)
+                .append(classroom * whiteCansPerClassroom)
                 .append(" банок белой краски и ")
-                .append(classroom * _brownCansPerClassroom)
+                .append(classroom * brownCansPerClassroom)
                 .append(" банок коричневой краски");
 
-        _textBuilder.Print();
+        textBuilder.Print();
     }
 }

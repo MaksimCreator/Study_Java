@@ -1,5 +1,5 @@
-import Homework.Homework_3;
-import Tasks.TasksHomework3.*;
+import Homework.Homework_4;
+import Tasks.Homework4.*;
 import Service_Locator.ServiceLocator;
 
 void main()
@@ -9,8 +9,6 @@ void main()
     ThirdTask thirdTask = new ThirdTask();
     FourthTask fourthTask = new FourthTask();
     FifthTask fifthTask = new FifthTask();
-    SixthTask sixthTask = new SixthTask();
-    SeventhTask seventhTask = new SeventhTask();
 
     ServiceLocator serviceLocator = new ServiceLocator();
 
@@ -19,10 +17,8 @@ void main()
     serviceLocator.Registery(ThirdTask.class,thirdTask);
     serviceLocator.Registery(FourthTask.class,fourthTask);
     serviceLocator.Registery(FifthTask.class,fifthTask);
-    serviceLocator.Registery(SixthTask.class,sixthTask);
-    serviceLocator.Registery(SeventhTask.class,seventhTask);
 
-    Homework_3 homework_3 = new Homework_3(serviceLocator);
+    Homework_4 homework_4 = new Homework_4(serviceLocator);
 
-    homework_3.Print();
+    homework_4.Print();
 }

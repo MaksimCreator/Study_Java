@@ -18,10 +18,10 @@ public class ThirdTask implements IService
         if(speed < 0)
             throw new IllegalStateException("Invalid Operation");
 
-        if(speed > 60)
-            PrintSpeedLimitExceeded(speed);
-        else
+        if(speed < 60)
             PrintNotSpeedLimitExceeded(speed);
+        else
+            PrintSpeedLimitExceeded(speed);
     }
 
     private void PrintSpeedLimitExceeded(float speed)

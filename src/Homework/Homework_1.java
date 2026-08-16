@@ -2,7 +2,7 @@ package Homework;
 
 public class Homework_1
 {
-    private final StringBuilder _stringBuilder = new StringBuilder();
+    private final StringBuilder stringBuilder = new StringBuilder();
     private final Company _company = new Company();
 
     private final double _firstBoxer;
@@ -98,26 +98,26 @@ public class Homework_1
         _company.SetWorkingHours(workingHours);
         _company.SetWorkingPerHours(workingPerHours);
 
-        _stringBuilder.append("Всего работников в компании — ").append(_company.GetWorkers()).append(" человек");
-        IO.println(_stringBuilder.toString());
-        _stringBuilder.setLength(0);
+        stringBuilder.append("Всего работников в компании — ").append(_company.GetWorkers()).append(" человек");
+        IO.println(stringBuilder.toString());
+        stringBuilder.setLength(0);
 
         _company.AddWorkers(addedWorkers);
 
-        _stringBuilder.append("Если в компании работает ").append(_company.GetWorkers()).append(" человек, то всего ")
+        stringBuilder.append("Если в компании работает ").append(_company.GetWorkers()).append(" человек, то всего ")
                 .append(_company.GetWorkingHours()).append(" часов работы может быть поделено между сотрудниками");
 
-        IO.println(_stringBuilder.toString());
-        _stringBuilder.setLength(0);
+        IO.println(stringBuilder.toString());
+        stringBuilder.setLength(0);
     }
 
     private String BuildAnimals()
     {
         String string;
 
-        _stringBuilder.append("dog: ").append(_dog).append(" cat: ").append(_cat).append(" paper: ").append(_paper);
-        string = _stringBuilder.toString();
-        _stringBuilder.setLength(0);
+        stringBuilder.append("dog: ").append(_dog).append(" cat: ").append(_cat).append(" paper: ").append(_paper);
+        string = stringBuilder.toString();
+        stringBuilder.setLength(0);
 
         return string;
     }

@@ -32,14 +32,14 @@ public class ThirdTask implements IService
             textBuilder.append(year)
                     .append(" год является високосным");
 
-            textBuilder.Print();
+            textBuilder.print();
         }
         else
         {
             textBuilder.append(year)
                     .append(" год не является високосным");
 
-            textBuilder.Print();
+            textBuilder.print();
         }
     }
 }

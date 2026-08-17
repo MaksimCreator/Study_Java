@@ -37,7 +37,7 @@ public class FourthTask implements IService
                 .append(years)
                 .append(" то ему нужно ходить в детский сад.");
 
-        textBuilder.Print();
+        textBuilder.print();
     }
 
     private void PrintSchool(int years)
@@ -49,7 +49,7 @@ public class FourthTask implements IService
                 .append(years)
                 .append(" то ему нужно ходить в школу.");
 
-        textBuilder.Print();
+        textBuilder.print();
     }
 
     private void PrintUniversity(int years)
@@ -61,7 +61,7 @@ public class FourthTask implements IService
                 .append(years)
                 .append(" то его место в университете.");
 
-        textBuilder.Print();
+        textBuilder.print();
     }
 
     private void PrintWork(int years)
@@ -73,6 +73,6 @@ public class FourthTask implements IService
                 .append(years)
                 .append(" то ему пора ходить на работу.");
 
-        textBuilder.Print();
+        textBuilder.print();
     }
 }

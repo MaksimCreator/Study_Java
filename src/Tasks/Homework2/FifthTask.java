@@ -23,6 +23,6 @@ public class FifthTask implements IService
                 .append(classroom * brownCansPerClassroom)
                 .append(" банок коричневой краски");
 
-        textBuilder.Print();
+        textBuilder.print();
     }
 }

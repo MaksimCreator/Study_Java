@@ -33,7 +33,7 @@ public class ThirdTask implements IService
                 .append(speed)
                 .append(" то придется заплатить штраф");
 
-        textBuilder.Print();
+        textBuilder.print();
     }
 
     private void PrintNotSpeedLimitExceeded(float speed)
@@ -45,6 +45,6 @@ public class ThirdTask implements IService
                 .append(speed)
                 .append(" то можно ездить спокойно");
 
-        textBuilder.Print();
+        textBuilder.print();
     }
 }

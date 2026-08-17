@@ -35,6 +35,6 @@ public class FirstTask implements IService
                 .append(" равно ")
                 .append(variable);
 
-        _textBuilder.Print();
+        _textBuilder.print();
     }
 }

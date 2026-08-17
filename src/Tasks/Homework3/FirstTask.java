@@ -33,7 +33,7 @@ public class FirstTask implements IService
                 .append(years)
                 .append(" то он совершеннолетний");
 
-        textBuilder.Print();
+        textBuilder.print();
     }
 
     private void PrintNotAdult(int years)
@@ -45,6 +45,6 @@ public class FirstTask implements IService
             .append(years)
             .append(" то он не достиг совершеннолетия, нужно немного подождать");
 
-        textBuilder.Print();
+        textBuilder.print();
     }
 }

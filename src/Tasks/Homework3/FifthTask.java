@@ -35,7 +35,7 @@ public class FifthTask implements IService
                 .append(years)
                 .append(" то он не может кататься на аттракционе.");
 
-        textBuilder.Print();
+        textBuilder.print();
     }
 
     private void PrintRideOnlyWithAdult(int years)
@@ -48,7 +48,7 @@ public class FifthTask implements IService
                 .append(" то он может кататься только в сопровождении взрослого.")
                 .append("Если взрослого нет, то кататься нельзя.");
 
-        textBuilder.Print();
+        textBuilder.print();
     }
 
     private void PrintRide(int years)
@@ -60,6 +60,6 @@ public class FifthTask implements IService
                 .append(years)
                 .append(" то он может кататься без сопровождения взрослого.");
 
-        textBuilder.Print();
+        textBuilder.print();
     }
 }

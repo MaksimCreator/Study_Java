@@ -31,6 +31,6 @@ public class FourthTask implements IService
                 .append(bottles)
                 .append(" штук бутылок");
 
-        _textBuilder.Print();
+        _textBuilder.print();
     }
 }

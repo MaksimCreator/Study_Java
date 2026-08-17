@@ -47,7 +47,7 @@ public class SixthTask implements IService
             textBuilder.append("Вагон уже полностью забит");
         }
 
-        textBuilder.Print();
+        textBuilder.print();
     }
 
     private int Input(String typePlaces,int maxPlaced)

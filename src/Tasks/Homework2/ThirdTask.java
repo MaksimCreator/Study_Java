@@ -16,6 +16,6 @@ public class ThirdTask implements IService
                 .append(sheets / studets)
                 .append(" листов бумаги");
 
-        textBuilder.Print();
+        textBuilder.print();
     }
 }

@@ -45,6 +45,6 @@ public class EighthTask implements IService
                 .append(growthYearSalary)
                 .append(" рублей");
 
-        textBuilder.Print();
+        textBuilder.print();
     }
 }

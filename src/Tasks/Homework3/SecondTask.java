@@ -30,7 +30,7 @@ public class SecondTask implements IService
                 .append(degrees)
                 .append(" градусов, нужно надеть шапку");
 
-        textBuilder.Print();
+        textBuilder.print();
     }
 
     private void PrintHot(float degrees)
@@ -42,6 +42,6 @@ public class SecondTask implements IService
                 .append(degrees)
                 .append(" градусов, можно идти без шапки");
 
-        textBuilder.Print();
+        textBuilder.print();
     }
 }

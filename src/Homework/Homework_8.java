@@ -1,27 +1,23 @@
 package Homework;
 
 import Service_Locator.ServiceLocator;
-import Tasks.Homework3.*;
+import Tasks.Homework8.*;
 
-public class Homework_3
+public class Homework_8
 {
     private final FirstTask firstTask;
     private final SecondTask secondTask;
     private final ThirdTask thirdTask;
     private final FourthTask fourthTask;
     private final FifthTask fifthTask;
-    private final SixthTask sixthTask;
-    private final SeventhTask seventhTask;
 
-    public Homework_3(ServiceLocator locator)
+    public Homework_8(ServiceLocator locator)
     {
         firstTask = locator.GetService(FirstTask.class);
         secondTask = locator.GetService(SecondTask.class);
         thirdTask = locator.GetService(ThirdTask.class);
         fourthTask = locator.GetService(FourthTask.class);
         fifthTask = locator.GetService(FifthTask.class);
-        sixthTask = locator.GetService(SixthTask.class);
-        seventhTask = locator.GetService(SeventhTask.class);
     }
 
     public void Print()
@@ -49,16 +45,6 @@ public class Homework_3
         IO.println(5);
         IO.println();
         fifthTask.Print();
-        IO.println("_______________________________________");
-
-        IO.println(6);
-        IO.println();
-        sixthTask.Print();
-        IO.println("_______________________________________");
-
-        IO.println(7);
-        IO.println();
-        seventhTask.Print();
         IO.println("_______________________________________");
     }
 }

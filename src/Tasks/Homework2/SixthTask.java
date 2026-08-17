@@ -1,7 +1,6 @@
-package Tasks.TasksHomework2;
+package Tasks.Homework2;
 
 import Service_Locator.IService;
-import Tasks.TextBuilder;
 
 public class SixthTask implements IService
 {

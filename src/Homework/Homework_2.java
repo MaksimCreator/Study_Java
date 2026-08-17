@@ -1,6 +1,6 @@
 package Homework;
 
-import Tasks.TasksHomework2.*;
+import Tasks.Homework2.*;
 import Service_Locator.ServiceLocator;
 
 public class Homework_2

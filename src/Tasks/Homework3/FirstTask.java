@@ -1,4 +1,4 @@
-package Tasks.TasksHomework3;
+package Tasks.Homework3;
 
 import Service_Locator.IService;
 import Tasks.TextBuilder;

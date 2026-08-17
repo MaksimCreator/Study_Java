@@ -2,7 +2,6 @@ package Tasks.Homework10;
 
 import Service_Locator.IService;
 import Tasks.TextBuilder;
-
 import java.util.Scanner;
 
 public class FirstTask implements IService {
@@ -11,13 +10,13 @@ public class FirstTask implements IService {
 
     public void print() {
         IO.println("Введите год");
-        String message = canYearLeap(scanner.nextInt());
+        String message = getMessageYearLeap(scanner.nextInt());
         IO.println(message);
     }
 
-    private String canYearLeap(int year)
+    private String getMessageYearLeap(int year)
     {
-        if (year % 4 == 0) {
+        if (canYearLeap(year)) {
             textBuilder.append(year)
                     .append(" год является високосным");
         }
@@ -28,4 +27,7 @@ public class FirstTask implements IService {
 
         return textBuilder.getLine();
     }
+
+    private boolean canYearLeap(int year)
+    { return year % 4 == 0 && (year % 100 != 0 || year % 400 == 0); }
 }

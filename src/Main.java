@@ -1,20 +1,14 @@
-import Homework.Homework_10;
-import Service_Locator.ServiceLocator;
-import Tasks.Homework10.*;
 
-void main()
+import Tasks.Homework11.Author;
+import Tasks.Homework11.Book;
+
+void main(String[] args)
 {
-    FirstTask firstTask = new FirstTask();
-    SecondTask secondTask = new SecondTask();
-    ThirdTask thirdTask = new ThirdTask();
+    Author ivan = new Author("Ivan", "Ivanovich");
+    Author peter = new Author("Peter", "Petrov");
 
-    ServiceLocator serviceLocator = new ServiceLocator();
+    Book book1 = new Book("Speed developing", ivan, 1960);
+    Book book2 = new Book("Start developing", peter, 2012);
 
-    serviceLocator.Registery(FirstTask.class,firstTask);
-    serviceLocator.Registery(SecondTask.class,secondTask);
-    serviceLocator.Registery(ThirdTask.class,thirdTask);
-
-    Homework_10 homework10 = new Homework_10(serviceLocator);
-
-    homework10.print();
+    book1.setYearPublication(2001);
 }

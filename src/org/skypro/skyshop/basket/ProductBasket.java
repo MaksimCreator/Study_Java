@@ -33,6 +33,7 @@ public class ProductBasket {
 
     public void allPrint(){
         boolean canEmpty = true;
+        int countSpecialProduct = 0;
 
         for(int i = 0; i < _products.length; i++){
             Product product = _products[i];
@@ -40,11 +41,13 @@ public class ProductBasket {
             if (product == null)
                 continue;
 
-            canEmpty = false;
+            if(canEmpty)
+                canEmpty = false;
 
-            IO.print(product.Name);
-            IO.print(": ");
-            IO.println(product.Price);
+            if(product.isSpecial())
+                countSpecialProduct += 1;
+
+            IO.println(product.toString());
         }
 
         if(canEmpty == false){
@@ -54,6 +57,9 @@ public class ProductBasket {
         else{
             IO.println("в корзине пусто");
         }
+
+        IO.print("Специальных товаров: ");
+        IO.println(countSpecialProduct);
     }
 
     public boolean checkProductForName(String name){

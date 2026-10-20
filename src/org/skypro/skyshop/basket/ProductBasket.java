@@ -1,18 +1,18 @@
 package org.skypro.skyshop.basket;
 
-import org.skypro.skyshop.product.Product;
 import java.util.Objects;
+import org.skypro.skyshop.product.Product;
 
 public class ProductBasket {
-    private final Product[] _products = new Product[5];
+    private final Product[] products = new Product[5];
 
     public void add(Product product) {
-        for(int i = 0; i < _products.length; i++){
-            if(_products[i] == null){
-                _products[i] = product;
+        for(int i = 0; i < products.length; i++){
+            if(products[i] == null){
+                products[i] = product;
                 break;
             }
-            else if(i + 1 == _products.length){
+            else if(i + 1 == products.length){
                 IO.println("Невозможно добавить продукт");
             }
         }
@@ -21,11 +21,11 @@ public class ProductBasket {
     public int getCost(){
         int cost = 0;
 
-        for(int i = 0; i < _products.length; i++){
-            Product product = _products[i];
+        for(int i = 0; i < products.length; i++){
+            Product product = products[i];
 
             if(product != null)
-                cost += _products[i].Price;
+                cost += products[i].Price;
         }
 
         return cost;
@@ -35,8 +35,8 @@ public class ProductBasket {
         boolean canEmpty = true;
         int countSpecialProduct = 0;
 
-        for(int i = 0; i < _products.length; i++){
-            Product product = _products[i];
+        for(int i = 0; i < products.length; i++){
+            Product product = products[i];
 
             if (product == null)
                 continue;
@@ -63,8 +63,8 @@ public class ProductBasket {
     }
 
     public boolean checkProductForName(String name){
-        for(int i = 0; i < _products.length; i++){
-            Product product = _products[i];
+        for(int i = 0; i < products.length; i++){
+            Product product = products[i];
 
             if(product == null)
                 continue;
@@ -77,7 +77,7 @@ public class ProductBasket {
     }
 
     public void clear(){
-        for(int i = 0; i < _products.length; i++)
-            _products[i] = null;
+        for(int i = 0; i < products.length; i++)
+            products[i] = null;
     }
 }

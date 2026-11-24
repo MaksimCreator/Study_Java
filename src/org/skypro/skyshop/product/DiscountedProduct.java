@@ -5,8 +5,8 @@ public class DiscountedProduct extends Product{
     private final float sale;
 
     public DiscountedProduct(String name,int price,int sale){
-        if(sale < 0 || sale > 100)
-            throw new IllegalStateException();
+        if(sale < 0 || sale > 100 || price < 0)
+            throw new IllegalArgumentException();
 
         this.price = price;
         this.sale = sale;

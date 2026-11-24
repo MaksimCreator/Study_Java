@@ -2,6 +2,9 @@ package org.skypro.skyshop;
 
 import org.skypro.skyshop.Interface.Searchable;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class SearchEngine {
     private final int MAX_INDEX = 5;
 
@@ -17,21 +20,42 @@ public class SearchEngine {
     }
 
     public Searchable[] search(String text){
-        int count = 0;
-        Searchable[] coincidences = new Searchable[MAX_INDEX];
+        List<Searchable> other = new ArrayList<>();
 
-        for(int i = 0; i < searchables.length; i++){
-            if(searchables[i] != null && searchables[i].searchTerm().contains(text)){
-                coincidences[count] = searchables[i];
-                count++;
+        for(int i = 0; i < searchables.length; i++)
+            if(searchables[i] != null && searchables[i].searchTerm().contains(text))
+                other.add(searchables[i]);
+
+        return other.toArray(Searchable[]::new);
+    }
+
+    public Searchable findBestMatchSearchable(String search) {
+        if(search == null || search.isBlank())
+            throw new IllegalArgumentException();
+
+        Searchable[] coincidences = this.search(search);
+        Searchable bestSearchable = null;
+        int maxCount = -1;
+
+        for (Searchable item : coincidences) {
+            int count = 0;
+            String term = item.searchTerm();
+
+            for (int i = 0; i <= term.length() - search.length(); i++) {
+                if (term.startsWith(search, i)) {
+                    count++;
+                }
+            }
+
+            if (count > maxCount) {
+                maxCount = count;
+                bestSearchable = item;
             }
         }
 
-        Searchable[] otherCoincidences = new Searchable[count];
+        if(bestSearchable == null)
+            throw new BestResultNotFound();
 
-        for(int i = 0; i < otherCoincidences.length;i++)
-            otherCoincidences[i] = coincidences[i];
-
-        return otherCoincidences;
+        return bestSearchable;
     }
 }

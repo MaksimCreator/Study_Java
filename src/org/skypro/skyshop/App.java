@@ -1,26 +1,19 @@
 package org.skypro.skyshop;
 
-import org.skypro.skyshop.basket.ProductBasket;
-import org.skypro.skyshop.product.DiscountedProduct;
-import org.skypro.skyshop.product.FixPriceProduct;
-import org.skypro.skyshop.product.Product;
-import org.skypro.skyshop.product.SimpleProduct;
+import org.skypro.skyshop.Interface.Searchable;
 
 public class App {
     public void main(){
-        Product apple = new SimpleProduct("Apple", 50);
-        Product milk = new DiscountedProduct("Milk", 100,10);
-        Product bird = new FixPriceProduct("Bird");
+        SearchEngine engine = new SearchEngine();
 
-        ProductBasket basket = new ProductBasket();
+        engine.add(new Article("1", "description"));
+        engine.add(new Article("2", "description"));
+        engine.add(new Article("3", "Описания"));
+        engine.add(new Article("4", "Описания"));
 
-        basket.add(apple);
-        basket.add(milk);
-        basket.add(bird);
-        basket.add(apple);
-        basket.add(milk);
+        Searchable[] searchables = engine.search("description");
 
-        basket.allPrint();
-        IO.println();
+        for(int i = 0; i < searchables.length;i++)
+            IO.println(searchables[i].getStringRepresentation());
     }
 }

@@ -6,45 +6,39 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SearchEngine {
-    private final int MAX_INDEX = 5;
-
-    private Searchable[] searchables = new Searchable[MAX_INDEX];
-    private int index = 0;
+    private final List<Searchable> searchables = new ArrayList<>();
 
     public void add(Searchable searchable){
-        if(index == MAX_INDEX)
-            return;
-
-        searchables[index] = searchable;
-        index++;
+        searchables.add(searchable);
     }
 
-    public Searchable[] search(String text){
+    public List<Searchable> search(String text){
         List<Searchable> other = new ArrayList<>();
 
-        for(int i = 0; i < searchables.length; i++)
-            if(searchables[i] != null && searchables[i].searchTerm().contains(text))
-                other.add(searchables[i]);
+        for(Searchable item: searchables){
+            if(item != null && item.searchTerm().contains(text))
+                other.add(item);
+        }
 
-        return other.toArray(Searchable[]::new);
+        return other;
     }
 
-    public Searchable findBestMatchSearchable(String search) {
-        if(search == null || search.isBlank())
+    public Searchable findBestAccordanceText(String text) {
+        if(text == null || text.isBlank())
             throw new IllegalArgumentException();
 
-        Searchable[] coincidences = this.search(search);
+        List<Searchable> coincidences = this.search(text);
         Searchable bestSearchable = null;
+
         int maxCount = -1;
 
-        for (Searchable item : coincidences) {
+        for (Searchable item: coincidences) {
             int count = 0;
             String term = item.searchTerm();
 
-            for (int i = 0; i <= term.length() - search.length(); i++) {
-                if (term.startsWith(search, i)) {
+            for (int i = 0; i <= term.length() - text.length(); i++) {
+                if (term.startsWith(text, i))
                     count++;
-                }
             }
 
             if (count > maxCount) {

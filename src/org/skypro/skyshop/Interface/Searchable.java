@@ -5,6 +5,6 @@ public interface Searchable {
     String getContent();
 
     default String getStringRepresentation(){
-        return "Имя " + searchTerm() + "-объекта — тип " + getContent() + "-объекта»";
+        return "Имя " + searchTerm() + " — объекта\nтип " + getContent() + " — объекта";
     }
 }

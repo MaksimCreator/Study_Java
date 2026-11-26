@@ -4,8 +4,10 @@ public class SimpleProduct extends Product {
     private final int price;
 
     public SimpleProduct(String name,int price){
-        this.price = price;
+        if(price < 0)
+            throw new IllegalArgumentException();
 
+        this.price = price;
         super(name);
     }
 

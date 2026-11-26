@@ -7,6 +7,9 @@ public abstract class Product implements Searchable {
     public final int Price;
 
     public Product(String name){
+        if(name == null || name.isBlank())
+            throw new IllegalArgumentException();
+
         Name = name;
         Price = getPrice();
     }
